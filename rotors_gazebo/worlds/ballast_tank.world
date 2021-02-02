@@ -97,8 +97,8 @@
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes.dae</uri>
-              <scale>0.05 0.05 0.05</scale>
+              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
+              <scale>1 1 1</scale>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -118,8 +118,8 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes.dae</uri>
-              <scale>0.05 0.05 0.05</scale>
+              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
+              <scale>1 1 1</scale>
             </mesh>
           </geometry>
           <material>
