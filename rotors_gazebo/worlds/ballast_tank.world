@@ -88,16 +88,14 @@
     </spherical_coordinates>
 
     <model name="ballast_tank">
-      <pose>0.0 0.0 0.0  1.5707 0.0 0.0</pose>
+      <pose>0.0 0.0 0.0  0.0 0.0 0.0</pose>
       <static>true</static>
       
-      <link name="ballast_tank_link"/>
-
-      <link name="ballast_tank_no_pipes_link">
+      <link name="ballast_tank_link">
         <collision name="collision">
           <geometry>
             <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
+              <uri>model://ballast_tank/meshes/ballast_tank_2x.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -118,7 +116,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
+              <uri>model://ballast_tank/meshes/ballast_tank_2x.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -133,14 +131,6 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <joint type="fixed" name="ballast_tank_no_pipes_joint"> 
-        <pose frame=''>0.0 0.0 0.0  0.0 0.0 0.0</pose>
-        <parent>ballast_tank_link</parent>
-        <child>ballast_tank_no_pipes_link</child>
-        <axis>
-          <xyz>0 0 1</xyz>
-        </axis>
-      </joint>
     </model>
 
     <state world_name='default'>
@@ -149,10 +139,10 @@
       <wall_time>1611600881 000000000</wall_time>
       <iterations>0</iterations>
       <model name='ballast_tank'>
-        <pose frame=''>-5 0 0 1.5707 0 0</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='ballast_tank_link'>
-          <pose frame=''>-5 0 0 1.5707 0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <velocity>0 0 0 0 0 0</velocity>
           <acceleration>0 0 0 0 0 0</acceleration>
           <wrench>0 0 0 0 0 0</wrench>

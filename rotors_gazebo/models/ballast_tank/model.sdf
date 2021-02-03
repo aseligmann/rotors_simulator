@@ -1,58 +1,48 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
   <model name="ballast_tank">
-      <pose>0.0 0.0 0.0  1.5707 0.0 0.0</pose>
-      <static>true</static>
-      
-      <link name="ballast_tank_link"/>
-
-      <link name="ballast_tank_no_pipes_link">
-        <collision name="collision">
-          <geometry>
-            <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
+    <pose>0.0 0.0 0.0  0.0 0.0 0.0</pose>
+    <static>true</static>
+    
+    <link name="ballast_tank_link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://ballast_tank/meshes/ballast_tank_2x.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <bounce/>
+          <friction>
+            <torsional>
               <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>model://ballast_tank/meshes/ballast_tank_no_pipes_2x.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://ballast_tank/materials/scripts/repeated.material</uri>
-              <name>FullMaterial</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <joint type="fixed" name="ballast_tank_no_pipes_joint"> 
-        <pose frame=''>0.0 0.0 0.0  0.0 0.0 0.0</pose>
-        <parent>ballast_tank_link</parent>
-        <child>ballast_tank_no_pipes_link</child>
-        <axis>
-          <xyz>0 0 1</xyz>
-        </axis>
-      </joint>
-    </model>
+            </torsional>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://ballast_tank/meshes/ballast_tank_2x.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://ballast_tank/materials/scripts/repeated.material</uri>
+            <name>FullMaterial</name>
+          </script>
+        </material>
+      </visual>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+  </model>
 </sdf>
